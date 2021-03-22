@@ -1,0 +1,37 @@
+<section id="widget-favorite" class="widget-favorite grid-y">
+  <div class="widget-favorite__cards">
+    <div class="widget-favorite__card grid-y" *ngFor="let sede of sedes">
+
+      <div class="widget-favorite__image-container grid-x align-center">
+        <div class="widget-favorite__image"
+              style="background-image: url( {{sede.image}}  );">
+        </div>
+      </div>
+
+      <div class="grid-x widget-favorite__middle-content">
+        <div class="grid-y">
+          <p class="no-margin widget-favorite__city-name">
+            <i class="fa fa-map-marker-alt main-widget__city-icon"></i>
+            {{ sede.name | uppercase }} - {{ sede.country | uppercase}}
+          </p>
+        </div>
+        <p class="widget-favorite__descript no-margin"> {{ sede.description }} </p>
+        <div class="widget-favorite__weather-info grid-y">
+          <div class="circle circle--temp"></div>
+          <p class="no-margin widget-favorite__weather-item"> {{ sede.temp | temp }} </p>
+          <div class="circle circle--humidity"></div>
+          <p class="no-margin widget-favorite__weather-item"> {{ sede.humidity | humidity }} </p>
+          <div class="circle circle--wind"></div>
+          <p class="no-margin widget-favorite__weather-item"> {{ sede.windSpeed | speed }}</p>
+        </div>
+      </div>
+
+      <div class="grid-x widget-favorite__icon-content">
+        <div class="widget-favorite__weather">
+          <i class="widget-icon wi wi-{{ sede.icon }}"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

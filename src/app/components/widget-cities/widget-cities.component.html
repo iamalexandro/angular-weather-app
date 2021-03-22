@@ -1,0 +1,9 @@
+<h2>Widget 5</h2>
+
+<div *ngFor="let city of mainRecomendedCities">
+  <div class="target">
+  <img [src]="city.image" style="width: 100px">
+  <p> {{ city.name }} </p>
+  <p> {{ city.url }} </p>
+  </div>
+</div>

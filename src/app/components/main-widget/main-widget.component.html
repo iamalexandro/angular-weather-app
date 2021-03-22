@@ -1,0 +1,83 @@
+<div class="helper">
+  <h4>Sedes: </h4>
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Temperatura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sede of sedes">
+      <td>
+        <img [src]="sede.image" style="width: 200px;">
+      </td>
+      <td> {{sede.name}} </td>
+      <td> {{sede.main.temp}} </td>
+    </tr>
+  </tbody>
+  <hr>
+
+
+  <h4>Only 1 sede</h4>
+  <button (click)="getSede(3674962)">Get Sede Medellin</button>
+  <button (click)="getSede(3687238)">Get Sede Cartagena</button>
+  <button (click)="getSede(4160021)">Get Sede JacksonVille</button>
+  <p></p>
+  <hr>
+</div>
+
+<!-- main widget -->
+<section id="widget-header" class="main-widget">
+  <div class="main-widget__target"
+      style="background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5)
+    ),url( {{sede.image}}  );"
+  >
+    <!-- weather icon -->
+    <div class="main-widget__weather">
+      <i class="widget-icon wi wi-{{ sede.icon }}"></i>
+    </div>
+
+    <!-- city name -->
+    <div class="main-widget__city">
+      <p class="widget-headquarter">
+        <i class="fa fa-map-marker-alt main-widget__city-icon"></i>
+        {{ sede.name | uppercase }}
+      </p>
+    </div>
+
+
+    <!-- weather info -->
+    <div class="main-widget__info grid-y">
+      <div class="grid-x">
+        <div class="main-widget__temp">
+          <p class="no-margin main-widget__temp-txt"> {{ sede.temp | temp }} </p>
+        </div>
+
+        <!-- temperature and wind -->
+        <div class="main-widget__weather-info">
+          <div class="main-widget__humidity">
+            <div class="circle circle--humidity"></div>
+            <p class="no-margin main-widget__humidity-txt"> {{ sede.humidity }} %</p>
+          </div>
+          <div class="main-widget__wind">
+            <div class="circle circle--wind"></div>
+            <p class="no-margin main-widget__wind-txt"> {{ sede.windSpeed }} m/s</p>
+          </div>
+        </div>
+
+        <!-- welcome message -->
+        <div class="main-widget__welcome">
+          <div class="main-widget__welcome-txt main-widget__welcome-txt--title">
+            <p class="no-margin ">Good morning,</p>
+          </div>
+          <div class="main-widget__welcome-txt main-widget__welcome-txt--subtitle">
+            <p class="no-margin ">Condor!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

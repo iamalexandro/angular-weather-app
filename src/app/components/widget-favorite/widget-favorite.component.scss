@@ -1,0 +1,155 @@
+// colors
+$primary: #5A00EA;
+$humidity: #D95ECB;
+$wind: #597AEF;
+$sun: #FFB82C;
+
+$secondary: #6757AC;
+$darkgray: #505050;
+$gray: #7C7C7C;
+$lightgray: #E6E6E6;
+
+$temp: #FFA767;
+
+//breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+
+//responsive sizes
+
+$widget-width-mob: 95%;
+$widget-height-mob: 40vw;
+
+$widget-width-tablet: 85%;
+$widget-height-tablet: 30vw;
+
+$widget-width-desktop: 60%;
+$widget-height-desktop: 20vw;
+
+//helpers
+.no-margin {
+  margin: 0;
+}
+
+.grid-x {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-y {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.circle {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  align-self: center;
+
+  &--humidity {
+    background: $humidity;
+  }
+
+  &--wind {
+    background: $wind;
+  }
+
+  &--temp {
+    background: $temp;
+  }
+}
+
+.widget-favorite {
+  font-family: Lato;
+  width: $widget-width-mob;
+  margin: 2rem auto 2rem 2vw;
+
+  &__cards {
+    width: 100%;
+  }
+
+  &__card {
+    border-radius: 20px;
+    margin: auto;
+    padding: 4% 1rem;
+    box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.75);
+    height: 6rem;
+    max-width: 25rem;
+  }
+
+  &__image-container {
+    width: 25%;
+  }
+
+  &__image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 55%;
+    background-size: cover;
+    align-self: center
+  }
+
+  &__middle-content {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__descript {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $darkgray;
+    font-weight: 200;
+    margin-top: 5px;
+  }
+
+  &__city-name {
+    color: $primary;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  &__weather-info {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 16px;
+    color: $gray;
+  }
+
+  &__weather-item {
+    margin-right: 15px;
+    margin-left: 5px;
+  }
+
+  &__weather {
+    transform: scale(4) translate(15px, 2px);
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .widget-favorite {
+    margin: 2rem auto 2rem 7vw;
+
+    &__cards {
+      margin: 0 1rem 1rem 0;
+      width: auto;
+    }
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .widget-favorite {
+
+    &__cards {
+      display: flex;
+    }
+  }
+}

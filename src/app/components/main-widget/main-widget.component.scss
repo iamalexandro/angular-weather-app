@@ -1,0 +1,214 @@
+// colors
+$primary: #5A00EA;
+$humidity: #D95ECB;
+$wind: #597AEF;
+$sun: #FFB82C;
+
+$secondary: #6757AC;
+$darkgray: #505050;
+$gray: #7C7C7C;
+$lightgray: #E6E6E6;
+
+$temp: #FFA767;
+
+//breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+
+//responsive sizes
+
+$widget-width-mob: 95%;
+$widget-height-mob: 40vw;
+
+$widget-width-tablet: 85%;
+$widget-height-tablet: 30vw;
+
+$widget-width-desktop: 60%;
+$widget-height-desktop: 20vw;
+
+//helpers
+.no-margin {
+  margin: 0;
+}
+
+.grid-x {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-y {
+  display: flex;
+  flex-direction: row;
+}
+
+.circle {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  align-self: center;
+
+  &--humidity {
+    background: $humidity;
+  }
+
+  &--wind {
+    background: $wind;
+  }
+}
+
+.main-widget {
+  font-family: Lato;
+  width: $widget-width-mob;
+  margin: 2rem auto;
+  color: white;
+
+  &__target {
+    border-radius: 20px;
+    height: $widget-height-mob;
+    padding: 1rem;
+    background-size: cover;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 4% 4%;
+  }
+
+  &__city {
+    height: 1.5rem;
+    background: $primary;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    inline-size: max-content;
+    padding: 2px 13px;
+    box-shadow: 0px 2px 10px -4px black;
+    margin-top: .5rem;
+  }
+
+  &__city-icon {
+    font-size: 10px;
+    transform: translateY(-1px);
+  }
+
+  .widget-headquarter {
+    font-size: 12px;
+    font-weight: 300;
+    text-shadow: 0 0 black;
+    margin: auto;
+    color: white;
+  }
+
+  &__weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 0;
+  }
+
+  .widget-icon {
+    transform: scale(4) translate(-6px, -3px);
+  }
+
+  &__info {
+    height: 93%;
+    align-items: flex-end;
+  }
+
+  &__temp-txt {
+    font-size: 40px;
+    font-weight: 100;
+    text-shadow: 0 0 black;
+  }
+
+  &__weather-info {
+    display: flex;
+  }
+
+  &__humidity,
+  &__wind {
+    display: flex;
+    margin: 0 .5rem;
+  }
+
+  &__humidity-txt,
+  &__wind-txt {
+    margin-left: .5rem;
+    font-weight: 300;
+    text-shadow: 0 0 black;
+  }
+
+  &__welcome-txt {
+    font-size: 20px;
+
+    &--title {
+      font-weight: 400;
+    }
+
+    &--subtitle {
+      font-weight: 500;
+    }
+  }
+}
+
+//responsive
+
+@media (min-width: $breakpoint-tablet) {
+  .main-widget {
+    width: $widget-width-tablet;
+
+    &__target {
+      height: $widget-height-tablet;
+    }
+
+    .widget-icon {
+      transform: scale(7) translate(-7px, -4px);
+    }
+
+    &__city {
+      margin-top: 1rem;
+    }
+
+    &__temp-txt {
+      font-size: 45px;
+    }
+
+    &__weather-info {
+      margin-bottom: 1rem;
+    }
+
+    &__welcome-txt {
+      font-size: 35px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .main-widget {
+    width: $widget-width-desktop;
+
+    .widget-icon {
+      transform: scale(9) translate(-8px, -4px);
+    }
+
+    &__target {
+      height: $widget-height-desktop;
+      border-radius: 30px;
+    }
+
+    &__city {
+      transform: scale(1.5) translateX(24px);
+    }
+
+    &__temp {
+      margin-bottom: 1rem;
+    }
+
+    &__weather-info {
+      margin-bottom: 2rem;
+    }
+
+    &__welcome-txt {
+      font-size: 45px;
+    }
+  }
+}
