@@ -37,7 +37,7 @@ _you can access to a live demo in this [link](https://vanilla-news.netlify.app)_
 
 * [HTML5](https://developer.mozilla.org/es/docs/Web/HTML) - for structure
 * [Vanilla](https://developer.mozilla.org/es/docs/Web/JavaScript) - for logic
-* [SCSS](https://sass-lang.com/guide) - pre processor for styles
-* [Angular]()
+* [SCSS](https://sass-lang.com/guide) - preprocessor for styles
+* [Angular](https://angular.io/guide/setup-local) - JavaScript Framework
 
 ⌨️ con ❤️ por [Nicola Di Candia](https://github.com/iamalexandro) 😊
