@@ -1,6 +1,6 @@
 # WeatherApp
 
-_This project was created to apply at Condor Labs like Frontend Web Developer charge_
+_This project was created to apply at Condor Labs like Frontend Developer charge_
 
 ## Getting Started 🚀
 
