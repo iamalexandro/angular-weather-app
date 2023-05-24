@@ -1,25 +1,29 @@
 <section id="widget-carousel" class="widget-carousel">
+  <h2 class="subtitle">Widget Extended Scroll ⬅️ ➡️</h2>
   <div class="widget-carousel__targets">
     <p class="no-margin widget-carousel__title">FORECAST EXTENDED</p>
 
     <div class="widget-carousel__container grid-x">
       <div class="grid-x">
-
         <div class="widget-carousel-item" *ngFor="let day of days">
           <div class="widget-day">
-            <p class="no-margin"> {{ day.date | date: 'EEEE' }} </p>
+            <p class="no-margin">{{ day.date | date : "EEEE" }}</p>
           </div>
           <div class="widget-carousel__temp-txt">
-            <p class="no-margin"> {{ day.temp | temp }} </p>
+            <p class="no-margin">{{ day.temp | temp }}</p>
           </div>
           <div class="widget-carousel__info grid-x">
             <div class="widget-carousel__humidity grid-x">
               <div class="circle circle--humidity"></div>
-              <p class="no-margin widget-carousel__humidity-txt"> {{ day.humidity }} %</p>
+              <p class="no-margin widget-carousel__humidity-txt">
+                {{ day.humidity }} %
+              </p>
             </div>
             <div class="widget-carousel__speed grid-x">
               <div class="circle circle--wind"></div>
-              <p class="no-margin widget-carousel__speed-txt"> {{ day.speed }} m/s</p>
+              <p class="no-margin widget-carousel__speed-txt">
+                {{ day.speed }} m/s
+              </p>
             </div>
           </div>
         </div>

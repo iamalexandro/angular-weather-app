@@ -1,15 +1,15 @@
 // colors
-$primary: #5A00EA;
-$humidity: #D95ECB;
-$wind: #597AEF;
-$sun: #FFB82C;
+$primary: #5a00ea;
+$humidity: #d95ecb;
+$wind: #597aef;
+$sun: #ffb82c;
 
-$secondary: #6757AC;
+$secondary: #6757ac;
 $darkgray: #505050;
-$gray: #7C7C7C;
-$lightgray: #E6E6E6;
+$gray: #7c7c7c;
+$lightgray: #e6e6e6;
 
-$temp: #FFA767;
+$temp: #ffa767;
 
 //breakpoints
 $breakpoint-tablet: 768px;
@@ -42,8 +42,8 @@ $widget-height-desktop: 20vw;
 }
 
 .circle {
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   align-self: center;
 
@@ -54,6 +54,45 @@ $widget-height-desktop: 20vw;
   &--wind {
     background: $wind;
   }
+}
+
+.change-city {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.button-sede {
+  background: #5a00ea;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-family: "Lato";
+  font-weight: 300;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 16px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
+}
+
+.title-app {
+  font-family: Lato;
+  color: black;
+  margin: 3rem 0 3rem 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: Lato;
+  color: black;
+  margin: 1rem 0 1rem 0;
 }
 
 .main-widget {
@@ -71,6 +110,7 @@ $widget-height-desktop: 20vw;
     display: flex;
     flex-direction: column;
     padding: 4% 4%;
+    box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.75);
   }
 
   &__city {
@@ -82,7 +122,7 @@ $widget-height-desktop: 20vw;
     inline-size: max-content;
     padding: 2px 13px;
     box-shadow: 0px 2px 10px -4px black;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   &__city-icon {
@@ -112,12 +152,13 @@ $widget-height-desktop: 20vw;
   &__info {
     height: 93%;
     align-items: flex-end;
+    text-align: left;
   }
 
   &__temp-txt {
     font-size: 40px;
     font-weight: 100;
-    text-shadow: 0 0 black;
+    text-shadow: 3px 3px 5px black;
   }
 
   &__weather-info {
@@ -127,12 +168,12 @@ $widget-height-desktop: 20vw;
   &__humidity,
   &__wind {
     display: flex;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 
   &__humidity-txt,
   &__wind-txt {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     font-weight: 300;
     text-shadow: 0 0 black;
   }

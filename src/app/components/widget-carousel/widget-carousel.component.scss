@@ -1,15 +1,15 @@
 // colors
-$primary: #5A00EA;
-$humidity: #D95ECB;
-$wind: #597AEF;
-$sun: #FFB82C;
+$primary: #5a00ea;
+$humidity: #d95ecb;
+$wind: #597aef;
+$sun: #ffb82c;
 
-$secondary: #6757AC;
+$secondary: #6757ac;
 $darkgray: #505050;
-$gray: #7C7C7C;
-$lightgray: #E6E6E6;
+$gray: #7c7c7c;
+$lightgray: #e6e6e6;
 
-$temp: #FFA767;
+$temp: #ffa767;
 
 //breakpoints
 $breakpoint-tablet: 768px;
@@ -39,8 +39,8 @@ $widget-width-desktop: 60%;
 }
 
 .circle {
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   align-self: center;
 
@@ -56,7 +56,7 @@ $widget-width-desktop: 60%;
 .widget-carousel {
   font-family: Lato;
   width: $widget-width-mob;
-  margin: 2rem auto 2rem 2vw;
+  margin: 4rem auto 2rem 2vw;
   max-width: 35rem;
 
   &__targets {
@@ -76,7 +76,7 @@ $widget-width-desktop: 60%;
   }
 
   .widget-day {
-    color:$darkgray;
+    color: $darkgray;
   }
 
   .widget-carousel-item {
@@ -84,7 +84,7 @@ $widget-width-desktop: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 2px solid $lightgray ;
+    border-right: 2px solid $lightgray;
   }
 
   &__temp-txt {
@@ -102,21 +102,21 @@ $widget-width-desktop: 60%;
   }
 
   &__humidity-txt,
-  &__speed-txt  {
+  &__speed-txt {
     font-weight: 300;
     font-size: 14px;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
 }
 
 @media (min-width: $breakpoint-tablet) {
   .widget-carousel {
-    margin: 2rem auto 2rem 7vw;
+    margin: 4rem auto 2rem 7vw;
   }
 }
 
 @media (min-width: $breakpoint-desktop) {
   .widget-carousel {
-    margin: 2rem auto 2rem 20vw;
+    margin: 4rem auto 2rem 20vw;
   }
 }

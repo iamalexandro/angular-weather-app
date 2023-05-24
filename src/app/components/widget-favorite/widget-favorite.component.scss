@@ -1,15 +1,15 @@
 // colors
-$primary: #5A00EA;
-$humidity: #D95ECB;
-$wind: #597AEF;
-$sun: #FFB82C;
+$primary: #5a00ea;
+$humidity: #d95ecb;
+$wind: #597aef;
+$sun: #ffb82c;
 
-$secondary: #6757AC;
+$secondary: #6757ac;
 $darkgray: #505050;
-$gray: #7C7C7C;
-$lightgray: #E6E6E6;
+$gray: #7c7c7c;
+$lightgray: #e6e6e6;
 
-$temp: #FFA767;
+$temp: #ffa767;
 
 //breakpoints
 $breakpoint-tablet: 768px;
@@ -46,8 +46,8 @@ $widget-height-desktop: 20vw;
 }
 
 .circle {
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   align-self: center;
 
@@ -68,6 +68,8 @@ $widget-height-desktop: 20vw;
   font-family: Lato;
   width: $widget-width-mob;
   margin: 2rem auto 2rem 2vw;
+  display: flex;
+  flex-direction: column;
 
   &__cards {
     width: 100%;
@@ -75,11 +77,12 @@ $widget-height-desktop: 20vw;
 
   &__card {
     border-radius: 20px;
-    margin: auto;
+    // margin: auto;
     padding: 4% 1rem;
     box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.75);
     height: 6rem;
     max-width: 25rem;
+    margin-bottom: 2rem;
   }
 
   &__image-container {
@@ -91,7 +94,7 @@ $widget-height-desktop: 20vw;
     height: 5rem;
     border-radius: 55%;
     background-size: cover;
-    align-self: center
+    align-self: center;
   }
 
   &__middle-content {
@@ -142,14 +145,13 @@ $widget-height-desktop: 20vw;
       width: auto;
     }
   }
-
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-desktop) {
   .widget-favorite {
-
+    margin: 2rem auto 2rem 20vw;
     &__cards {
-      display: flex;
+      // display: flex;
     }
   }
 }
