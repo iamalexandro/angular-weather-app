@@ -2,7 +2,7 @@
 
 ## Demo 👀
 
-_you can access to a live demo in this [link](https://angular-nico-weather.netlify.app/)_
+_you can access to a live demo in this [link](https://angular-nico-weather.netlify.app/)_ (optimized📱)
 
 ## Getting Started 🚀
 
