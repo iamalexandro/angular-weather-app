@@ -1,6 +1,8 @@
 # WeatherApp
 
-_This project was created to apply at Condor Labs like Frontend Developer_
+## Demo 👀
+
+_you can access to a live demo in this [link](https://angular-nico-weather.netlify.app/)_
 
 ## Getting Started 🚀
 
@@ -28,10 +30,6 @@ npm install -g @angular/cli
 ```
 ng serve --open
 ```
-
-## Demo 👀
-
-_you can access to a live demo in this [link](https://vanilla-news.netlify.app)_
 
 ## Build with 🛠️
 
